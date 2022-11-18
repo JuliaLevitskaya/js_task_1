@@ -1,11 +1,21 @@
-const secondButton = document.querySelector('.header__number[data-id="2"]');
-// const secondButton = document.querySelectorAll('.header__number')[1];
+const buttons = document.querySelectorAll('.header__number[data-id]');
 
-console.log(secondButton);
+buttons.forEach(button => {
+    const dataId = button.getAttribute('data-id');
+    button.addEventListener('click', () => {
+        setContentBlockInner(dataId);
+    });
+});
 
-function handleClick() {
-    document.querySelector('.info__descr[data-id="12"]').innerHTML = "2";
+function setContentBlockInner(inner) {
+    const active = document.querySelector('.info__field--active');
+    const fieldToBeActive = document.querySelector(`.info__field[data-id="${inner}"]`);
 
+    if (active) {
+        active.classList.remove('info__field--active');
+    }
+
+    if (fieldToBeActive) {
+        fieldToBeActive.classList.add('info__field--active');
+    }
 }
-
-secondButton.addEventListener('click', handleClick);

@@ -1,0 +1,19 @@
+.info {
+    min-height: 300px;
+    .info__field {
+        display: none;
+    }
+    .info__field-number {
+        font-size: 50px;
+    }
+    .info__descr {
+        width: 800px;
+        font-size: 20px;
+        letter-spacing: 5px;
+    }
+    .info__field--active {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 50px;
+    }
+}

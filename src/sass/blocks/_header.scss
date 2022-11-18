@@ -1,0 +1,17 @@
+    header {
+        padding-top: 30px;
+        min-height: 100px;
+        background-color: rgb(163, 239, 214);
+        .header__list {
+            display: flex;
+            justify-content: space-between;
+            .header__number {
+                font-weight: 300;
+                font-size: 50px;
+                cursor: pointer;
+            }
+            .header__number-active {
+                box-shadow: 3px 4px 23px rgb(66, 116, 203);
+            }
+        }
+    }
